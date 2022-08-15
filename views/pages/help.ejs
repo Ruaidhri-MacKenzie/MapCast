@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<%- include('../partials/head') %>
+	<title>Mapcast - Help</title>
+</head>
+<body id="help-body">
+	<%- include('../partials/header') %>
+	<!-- Main Content -->
+	<main id="help-main">	
+
+		<!-- Introduction -->
+		<div id="help-intro">
+			<h2 class="help-h2">Welcome to Mapcast!</h2>		
+			<p class="help-para" id="help-intro-p">Mapcast is the free web app that lets you see what people are uploading to YouTube near you, but how do you use it? This page will be your guide to the Mapcast service and will educate you on its various features and functions.</p>
+		</div>
+
+		<!-- Basics Section -->
+			<div id="help-basics">
+			<h2 class="help-h2"">The Basics</h2>
+			
+			<!-- Header Bar Content Help -->
+			<p class="help-para"><span class="span-hide">Every Mapcast session starts with the page shown below,</span> <span class="span-cap">this</span> section will cover the various buttons and information on display from the main page. Starting at the top of the page, this covers all of the features displayed in the bar along the top of the page, or, the header bar. From left to right the buttons shown are:</p>
+			<ol class="help-list">
+				<li>Saved Places - This button lets you see a list of all the locations that you've saved to your account, saving locations is covered later in this guide. </li>
+				<li>Videos - This button lets you see a list of videos that were uploaded in the area you searched, or view your saved videos, searching and saving videos is covered later in this guide. </li>
+				<li>Help - This button takes you to this help page in a new tab, this is useful any time you get confused about the service, and it keeps your current Mapcast session where it was. </li>
+				<li>User Settings - This button takes you to your user settings, this page allows you to change your password. This page won't open a new tab, so make sure to finish your session before you go to it! </li>
+				<li>Sign Out - This button signs you out of Mapcast and takes you back to the sign in page, any current sessions will be lost, so be sure to save your locations and videos before signing out.</li>
+			</ol>
+			<img src="../img/help/walkthrough1.jpg" alt="Image of Mapcast upon being opened" class="image-walkthrough">
+			
+			<!-- Footer Bar Content Help -->
+			<p class="help-para">Now moving on to the bottom of the page, this covers all of the features displayed in the bar along the bottom of the page, or the footer bar. From left to right the features shown are:</p>
+			<ol class="help-list">
+				<li>Latitude and Longitude - These are the exact latitudinal and longitudinal coordinates for your saved location, this is useful for finding more precise locations or searching locations in other map services. </li>
+				<li>Radius and Radius Size - Radius is the controller for how large you want your search area to be, you can control it either by dragging the slider or using the arrow keys with the slider selected. Radius Size is displayed next to this, this shows the current search radius. </li>
+				<li>Location Name and Save Location - The location name input is where you enter the name of the location that you want to save, entering the name will not automatically search the map for it so you must have the marker at the location before you save. Save Location is a button that saves the selected location to your saved places, this is good for remembering places you might want to revisit at a later time. </li>
+				<li>Safe Search - The safe search drop down list allows you to choose how much safe search you want to make your search with, none gives all results regardless of their maturity, moderate gives videos with a relaxed safe search filter and strict gives only safe search videos, this is the recommended setting if children are using the service. It’s important to note that your safe search settings are only applied after the search button is pressed, so you will have to search again if you want to use different settings. </li>
+				<li>Max Results - This setting allows you to customise how many results are displayed on a search. Once again this is only applied after the search button is pressed so you will have to search again if you want more results.</li>
+				<li>Search - This button searches for videos posted in the selected area within the selected radius. To see the searched videos press the videos button in the header bar.</li>
+			</ol>
+		</div>
+
+		<!-- Video Help Section -->
+		<div id="help-videos">
+			<h2 class="help-h2"">Searching for Videos</h2>
+			<p class="help-para">When searching for videos with Mapcast there are three important factors to take into account - marker location, search radius and search settings.</p>
+			<ol class="help-list">
+				<li>The marker location can be set by clicking on the map, the map can be panned by holding down left click and dragging your mouse. You can also zoom in using the scroll wheel for greater accuracy in selecting where the marker goes. </li>
+				<li>The search radius can be set with the radius controls in the footer bar, these allow you to set how large an area you want to search, making it useful for searching anything from a single town to an entire country!</li>
+				<li>Search settings are how many results you want to see and whether or not you want safe search on. How many results is useful if you just want to see the most popular videos uploaded in the area, whilst safe search is useful if a child is using the service or if you’re searching in public areas like a library.</li>
+			</ol>
+			<p class="help-para">Once you’ve searched for videos you can see your search results in the videos sidebar, from here you can save videos to your personal video library - which can also be accessed from the videos sidebar. To delete a saved video simply go to your saved videos and click delete.</p>
+		</div>
+
+		<!-- Location Help Section -->
+		<div id="help-locations">
+			<h2 class="help-h2"">Saving Locations</h2>
+			<p class="help-para">When you select a location to search, you can save it to your own personal location library, to do this simply select the location on the map, name the location using the location name box in the footer bar and click save location. From here you can open your saved places and see all of your saved locations, clicking one will automatically set the marker to that location - ready for you to search.</p>
+		</div>	
+		
+	</main>
+  
+	<%- include('../partials/footer') %>
+</body>
+</html>

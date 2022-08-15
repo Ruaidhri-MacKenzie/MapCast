@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<%- include('../partials/head') %>
+	<%- include('../partials/leaflet-head') %>
+
+	<title>Mapcast</title>
+
+	<!-- Include main.js as a module, which defers running until page has been loaded by default -->
+	<script src="../js/main.js" type="module"></script>
+</head>
+<body>
+
+	<!-- MAIN HEADER -->
+	<header id="main-header">
+
+		<!-- Title / Logo -->
+		<span class="header-span" id="logo-span">
+			<img class="header-logo" src="../img/logo/logoTextBlue.png">
+		</span>
+
+		<span class="header-span">
+			<!-- Saved Locations -->
+			<a id="location-toggle" class="header-button">
+				<img src="../img/icon/globe.png" class="header-image">
+				<p class="header-link"><%= username %>'s Places</p>
+			</a>
+		
+			<!-- View Videos -->
+			<a id="video-toggle" class="header-button">
+				<img src="../img/icon/video.png" class="header-image">
+				<p class="header-link">Videos</p>
+			</a>
+		</span>
+
+		<span class="header-span">
+			<!-- User Help -->
+			<a id="user-help" class="header-button" href="/help" target="_blank">
+				<img class="header-image" src="../img/icon/help.png">
+				<p class="header-link">Help</p>
+			</a>
+
+			<!-- User Settings -->
+			<a id="user-settings" class="header-button" href="/settings">
+				<img class="header-image" src="../img/icon/settings.png">
+				<p class="header-link">User Settings</p>
+			</a>
+
+			<!-- Sign out -->
+			<div id="sign-out" class="header-button">
+				<img class="header-image" src="../img/icon/signout.png">
+				<p class="header-link">Sign Out</p>
+			</div>
+		</span>
+	</header>
+
+	<!-- MAIN -->
+	<main id="main">
+		<!-- Map -->
+		<section id="map"></section>
+
+		<!-- Location sidebar -->
+		<aside id="location-sidebar" class="sidebar hidden">
+			<ul id="location-list">
+				<!-- Populate with Location Template -->
+			</ul>
+		</aside>
+		
+		<!-- Video sidebar -->
+		<aside id="video-sidebar" class="sidebar hidden">
+			<header class="sidebar-header">
+				<!-- Popular videos title/button -->
+				<h2 id="video-popular-tab" class="sidebar-title active">Popular Videos</h2>
+
+				<!-- Vertical line -->
+				<span class="vl"></span>
+
+				<!-- Saved videos title/button -->
+				<h2 id="video-saved-tab" class="sidebar-title"><%= username %>'s Videos</h2>
+			</header>
+
+			<ul id="video-popular-list">
+				<!-- Populate with Video Template -->
+				<li class="video-list-placeholder">Select a location and click Search to view popular videos from that area!</li>
+			</ul>
+			<ul id="video-saved-list" class="hidden-list">
+				<!-- Populate with Video Template -->
+			</ul>
+		</aside>
+	</main>
+
+	<!-- FOOTER -->
+	<footer id="footer">
+		<div class="footer-container" id="footer-location">
+			<!-- Current latitude text -->
+			<p id="location-current-lat">Latitude:</p>
+	
+			<!-- Current longitude text -->
+			<p id="location-current-lng">Longitude:</p>
+	
+			<!-- Radius slider -->
+			<label id="location-current-radius" for="radius-slider">Radius: 10km</label>
+			<input id="radius-slider" type="range" 
+				min="1" max="1000" value="10" step="1"
+				aria-valuemin="1" aria-valuemax="1000" aria-valuenow="10">
+			
+			<!-- Location name input box -->	
+			<input id="location-name-input" type="text" placeholder="Enter name for this location">
+	
+			<!-- Save Location button -->
+			<button id="location-save" class="footer-button">Save Location</button>
+		</div>
+		<div class="footer-container" id="footer-search">
+			<!-- Safe Search input -->
+			<label id="safe-search-container">Safe Search:
+				<select id="safe-input">
+					<option value="strict">Strict</option>
+					<option value="moderate ">Moderate</option>
+					<option value="none">None</option>
+				</select>
+			</label>
+	
+			<!-- Max Results input -->
+			<label id="max-results-container">Max Results:
+				<select id="max-results-input">
+					<option value="5">5</option>
+					<option value="10">10</option>
+					<option value="25">25</option>
+					<option value="50">50</option>
+				</select>
+			</label>
+	
+			<!-- Search Location button -->
+			<button id="search-submit" class="footer-button">Search</button>
+		</div>
+	</footer>
+
+	<!-- Video Template -->
+	<template id="video-template">
+		<li class="video">
+			<header class="video-header">
+				<h3 class="video-title"></h3>
+				<hr class="video-header-line">
+			</header>
+			<iframe class="video-preview" src="#" allowfullscreen></iframe>
+			<section class="video-options">
+				<button class="video-save video-button">Save</button>
+				<button class="video-delete video-button">Delete</button>
+			</section>
+		</li>
+	</template>
+</body>
+</html>

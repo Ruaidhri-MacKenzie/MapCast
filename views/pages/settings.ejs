@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<%- include('../partials/head') %>
+	<title>Mapcast - Settings</title>
+	
+	<!-- Include settings.js as a module, which defers running until page has been loaded by default -->
+	<script src="../js/settings.js" type="module"></script>
+</head>
+<body id="settings-body">
+	<%- include('../partials/header') %>
+	
+	<!-- Main Content -->
+	<main id="settings-main">
+		<!-- Return to index -->
+		<a href="index.ejs" id="settings-return"><p>← Back to Mapcast</p></a>
+		
+		<!-- Displays username -->
+		<h2 class="page-title"><%= username %></h2>
+		<p id="settings-about">This page lets you change your account's password.</p>
+		<!-- Password Change Form -->
+		<div class="auth-form-container" id="change-password-div">
+			<h3 class="auth-form-title">Change your account password</h3>
+			<form class="auth-form" id="change-password-form" action="" method="post">
+				<input class="auth-form-input" type="password" id="current-password" name="password" placeholder="Current Password"> 
+			  <input class="auth-form-input" type="password" id="new-password" name="newPassword" placeholder="New Password"> 
+			  <input class="auth-form-input" type="password" id="new-password-con" name="newPasswordConfirm" placeholder="Confirm New Password">
+			  <input class="auth-form-submit" type="submit" value="Change">
+			</form>
+		</div>
+
+		<div class="auth-form-container" id="delete-user-div">
+			<h3 class="auth-form-title">Delete your account</h3>
+			<form class="auth-form" id="delete-user-form" action="" method="delete">
+			  <input class="auth-form-submit" type="submit" value="Delete">
+			</form>
+		</div>
+	</main>
+  
+	<%- include('../partials/footer') %>
+</body>
+</html>

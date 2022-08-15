@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<%- include('../partials/head') %>
+	<title>Mapcast - Sign in or register for Mapcast today!</title>
+
+	<!-- Include auth.js as a module, which defers running until page has been loaded by default -->
+	<script src="../js/auth.js" type="module"></script>
+</head>
+<body id="login-body">
+	<%- include('../partials/header') %>
+
+	<!-- Main Content -->
+	<main id="login-main">
+		<h2 class="page-title">Welcome to Mapcast!</h2>
+		<p id="page-about">Mapcast is the web app that lets you see what YouTube videos people are uploading near you - just select an area on the map, press search, and open up the videos tab and start browsing! To use the service, simply sign in with an existing Mapcast account, or create one today!</p>
+			
+		<!-- Login Form -->
+		<div class="auth-form-container" id="login-form-container">
+			<h3 class="auth-form-title">Login to your Mapcast account</h2>
+			<form class="auth-form" id="login-form" action="" method="post">
+				<input class="auth-form-input" id="login-username" type="text" name="username" placeholder="Username">
+				<input class="auth-form-input" id="login-password" type="password" name="password" placeholder="Password">
+				<input class="auth-form-submit" type="submit" value="Login" >
+			</form>
+			<p>Don't have an account, <a class="auth-form-toggle" href="#register">register today!</a></p>
+		</div>
+
+		<!-- Register Form -->
+		<div class="auth-form-container hidden" id="register-form-container">
+			<h3 class="auth-form-title">Register for your Mapcast account today!</h2>
+			<form class="auth-form" id="register-form" action="" method="post">
+				<input class="auth-form-input" id="register-username" type="text" name="username" placeholder="Username">
+				<input class="auth-form-input" id="register-password" type="password" name="password" placeholder="Password">
+				<input class="auth-form-input" id="register-confirm" type="password" name="confirm" placeholder="Confirm password">
+				<input class="auth-form-submit" type="submit" value="Register">
+			</form>
+			<p>Already registered, <a class="auth-form-toggle" href="#login">login now!</a></p>
+		</div>
+	</main>
+  
+	<%- include('../partials/footer') %>
+</body>
+</html>
