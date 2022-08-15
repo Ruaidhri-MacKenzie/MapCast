@@ -1,5 +1,5 @@
 {
-  "name": "mapcast-server",
+  "name": "mapcast",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CM2104-DynamicWebDevelopment/cm2104-project-2122-grouper.git"
+    "url": "git+https://github.com/Ruaidhri-MacKenzie/Mapcast.git"
   },
   "author": "Grouper",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/CM2104-DynamicWebDevelopment/cm2104-project-2122-grouper/issues"
+    "url": "https://github.com/Ruaidhri-MacKenzie/Mapcast.git"
   },
-  "homepage": "https://github.com/CM2104-DynamicWebDevelopment/cm2104-project-2122-grouper#readme",
+  "homepage": "https://github.com/Ruaidhri-MacKenzie/Mapcast.git#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "connect-mongodb-session": "^3.1.1",
